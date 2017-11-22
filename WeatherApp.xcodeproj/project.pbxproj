@@ -14,6 +14,8 @@
 		BAA774091FC55D47001E436C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAA774071FC55D47001E436C /* LaunchScreen.storyboard */; };
 		BAA774141FC55D47001E436C /* WeatherAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA774131FC55D47001E436C /* WeatherAppTests.swift */; };
 		BAA7741F1FC55D47001E436C /* WeatherAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA7741E1FC55D47001E436C /* WeatherAppUITests.swift */; };
+		BAA7742D1FC55D5B001E436C /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA7742C1FC55D5B001E436C /* CurrentWeather.swift */; };
+		BAA7742F1FC5D476001E436C /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA7742E1FC5D476001E436C /* WeatherService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		BAA7741A1FC55D47001E436C /* WeatherAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAA7741E1FC55D47001E436C /* WeatherAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppUITests.swift; sourceTree = "<group>"; };
 		BAA774201FC55D47001E436C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAA7742C1FC55D5B001E436C /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
+		BAA7742E1FC5D476001E436C /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				BAA773FE1FC55D47001E436C /* AppDelegate.swift */,
+				BAA7742C1FC55D5B001E436C /* CurrentWeather.swift */,
+				BAA7742E1FC5D476001E436C /* WeatherService.swift */,
 				BAA774001FC55D47001E436C /* ViewController.swift */,
 				BAA774021FC55D47001E436C /* Main.storyboard */,
 				BAA774051FC55D47001E436C /* Assets.xcassets */,
@@ -259,7 +265,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAA7742F1FC5D476001E436C /* WeatherService.swift in Sources */,
 				BAA774011FC55D47001E436C /* ViewController.swift in Sources */,
+				BAA7742D1FC55D5B001E436C /* CurrentWeather.swift in Sources */,
 				BAA773FF1FC55D47001E436C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
