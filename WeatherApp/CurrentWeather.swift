@@ -33,3 +33,24 @@ struct Main: Decodable {
     case loTemp = "temp_min"
   }
 }
+
+extension Main {
+  var tempFahrenheit: Int {
+    return temp.fahrenheit()
+  }
+  
+  var hiTempFahrenheit: Int {
+    return hiTemp.fahrenheit()
+  }
+  
+  var loTempFahrenheit: Int {
+    return loTemp.fahrenheit()
+  }
+}
+
+extension Double {
+  func fahrenheit() -> Int {
+    let fahrenheit = (self * 9 / 5) - 459.67
+    return Int(fahrenheit)
+  }
+}
