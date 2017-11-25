@@ -21,10 +21,10 @@ struct Weather: Decodable {
 }
 
 struct Main: Decodable {
-  let temp: Double
+  let temp: Float
   let humidity: Int
-  let hiTemp: Double
-  let loTemp: Double
+  let hiTemp: Float
+  let loTemp: Float
   
   private enum CodingKeys: String, CodingKey {
     case temp
@@ -48,9 +48,10 @@ extension Main {
   }
 }
 
-extension Double {
+extension Float {
   func fahrenheit() -> Int {
     let fahrenheit = (self * 9 / 5) - 459.67
     return Int(fahrenheit)
   }
 }
+

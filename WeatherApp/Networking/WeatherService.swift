@@ -39,7 +39,7 @@ class WeatherService {
       } catch {
         print("Error: \(APIError.jsonDecoder)")
       }
-    } .resume()
+    }.resume()
   }
   
   

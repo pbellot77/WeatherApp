@@ -78,6 +78,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA2C54EC1FC9E06B001F20BC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BAA7742C1FC55D5B001E436C /* CurrentWeather.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BA2C54ED1FC9E095001F20BC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BAA774021FC55D47001E436C /* Main.storyboard */,
+				BAA774051FC55D47001E436C /* Assets.xcassets */,
+				BAA774071FC55D47001E436C /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BA2C54EE1FC9E0C6001F20BC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BAA774001FC55D47001E436C /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BA2C54EF1FC9E80B001F20BC /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				BAA7742E1FC5D476001E436C /* WeatherService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		BAA773F21FC55D47001E436C = {
 			isa = PBXGroup;
 			children = (
@@ -102,13 +136,11 @@
 			isa = PBXGroup;
 			children = (
 				BAA773FE1FC55D47001E436C /* AppDelegate.swift */,
-				BAA7742C1FC55D5B001E436C /* CurrentWeather.swift */,
-				BAA7742E1FC5D476001E436C /* WeatherService.swift */,
-				BAA774001FC55D47001E436C /* ViewController.swift */,
-				BAA774021FC55D47001E436C /* Main.storyboard */,
-				BAA774051FC55D47001E436C /* Assets.xcassets */,
-				BAA774071FC55D47001E436C /* LaunchScreen.storyboard */,
 				BAA7740A1FC55D47001E436C /* Info.plist */,
+				BA2C54EF1FC9E80B001F20BC /* Networking */,
+				BA2C54EC1FC9E06B001F20BC /* Model */,
+				BA2C54ED1FC9E095001F20BC /* View */,
+				BA2C54EE1FC9E0C6001F20BC /* Controller */,
 			);
 			path = WeatherApp;
 			sourceTree = "<group>";
