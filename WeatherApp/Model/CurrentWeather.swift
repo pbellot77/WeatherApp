@@ -22,7 +22,7 @@ struct Weather: Decodable {
 
 struct Main: Decodable {
   let temp: Float
-  let humidity: Int
+  let humidity: Float
   let hiTemp: Float
   let loTemp: Float
   

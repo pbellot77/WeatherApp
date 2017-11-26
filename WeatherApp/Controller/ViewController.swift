@@ -68,8 +68,13 @@ class ViewController: UIViewController {
       do {
         let currentWeather = try JSONDecoder().decode(CurrentWeather.self, from: data)
         print(currentWeather)
-        print(currentWeather.main)
-        print(currentWeather.weather)
+        for weather in currentWeather.weather {
+          DispatchQueue.main.async {
+            self.mainLabel.text = weather.main
+            self.descriptionLabel.text = weather.description
+            // TODO: get image
+          }
+        }
       } catch {
         print("Error: \(APIError.jsonDecoder)")
       }
