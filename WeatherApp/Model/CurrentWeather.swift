@@ -9,15 +9,13 @@
 import Foundation
 
 struct CurrentWeather: Decodable {
-  let name: String
-  let weather: [Weather]
-  let main: Main
+  let list: [List]
 }
 
-struct Weather: Decodable {
-  let main: String
-  let description: String
-  let icon: String
+struct List: Decodable {
+  let name: String
+  let main: Main
+  let weather: [Weather]
 }
 
 struct Main: Decodable {
@@ -34,16 +32,23 @@ struct Main: Decodable {
   }
 }
 
+struct Weather: Decodable {
+  let main: String
+  let description: String
+  let icon: String
+}
+
 extension Main {
+  
   var tempFahrenheit: Int {
     return temp.fahrenheit()
   }
   
-  var hiTempFahrenheit: Int {
+  var hiTempFarenheit: Int {
     return hiTemp.fahrenheit()
   }
   
-  var loTempFahrenheit: Int {
+  var loTempFarenheit: Int {
     return loTemp.fahrenheit()
   }
 }
