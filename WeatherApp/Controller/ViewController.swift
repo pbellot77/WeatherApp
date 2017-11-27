@@ -25,6 +25,20 @@ class ViewController: UIViewController {
     super.viewDidLoad()
     
     searchCity()
+    self.shared.getWeather(forCity: (self.cityLabel.text)!) { (success, response, error) in
+      if success {
+        guard let currentWeather = response as? CurrentWeather else { return }
+        // TODO: Get current weather values
+        if weather == currentWeather.list {
+          self.mainLabel.text = currentWeather.list[0].weather[0].main-
+        }
+      
+      
+        // TODO: Update outlets with values
+      } else if let error = error {
+        print(error)
+      }
+    }
   }
 
   func searchCity() {
@@ -34,7 +48,13 @@ class ViewController: UIViewController {
       print("OK pressed")
       let textField = alert.textFields?[0]
       self.cityLabel.text = textField?.text!
-      self.shared.getWeather(forCity: self.cityLabel.text!.uppercased())
+      self.shared.getWeather(forCity: (self.cityLabel.text?.uppercased())!, completion: { (success, response, error) in
+        if success {
+          print("City name selected")
+        } else if let error = error {
+          print(error)
+        }
+      })
     }
     alert.addTextField { (textfield: UITextField) in
       textfield.placeholder = "City Name"
