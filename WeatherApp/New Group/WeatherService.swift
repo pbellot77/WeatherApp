@@ -42,4 +42,4 @@ class WeatherService {
       }.resume()
   }
 
-}
+} // end of class
