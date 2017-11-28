@@ -25,9 +25,9 @@ class ViewController: UIViewController {
     super.viewDidLoad()
     
     searchCity()
-    self.shared.weatherDidUpdate { (true, currentWeather, error) in
-      // TODO: get values
-      // TODO: update outlets
+    WeatherService.shared.weatherDidUpdateNotification = { result in
+      // TODO: Get values from decoded JSON
+      // TODO: Update labels with values
     }
   }
 
