@@ -20,7 +20,7 @@ class WeatherService {
   private init() {}
   static let shared = WeatherService()
   
-  func getWeather(forCity: String, completion: @escaping (Bool, Any?, Error?) -> Void) {
+  func getWeather(forCity: String) {
     guard let url = URL(string: "http://api.openweathermap.org/data/2.5/find?q=\(forCity)&units=imperial&APPID=ba639933d32f48c47d197ac099fa0ec4") else { return }
     let session = URLSession.shared
     session.dataTask(with: url) { (data, response, error) in
@@ -37,15 +37,22 @@ class WeatherService {
         let currentWeather = try JSONDecoder().decode(CurrentWeather.self, from: data)
         print(currentWeather)
         DispatchQueue.main.async {
-          completion(true, currentWeather, nil)
+          self.weatherDidUpdate(completion: { (true, currentWeather, nil) in
+            // TODO: Pass values to viewController
+          })
         }
       } catch {
         print("Error: \(APIError.jsonDecoder)")
         DispatchQueue.main.async {
-          completion(false, nil, error)
+          self.weatherDidUpdate(completion: { (false, nil, error) in
+            print(error)
+          })
         }
       }
       }.resume()
+  }
+  
+  func weatherDidUpdate(completion: @escaping(Bool, Any?, Error) -> Void) {
   }
 
 } // end of class
