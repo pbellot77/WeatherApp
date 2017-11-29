@@ -26,12 +26,13 @@ class ViewController: UIViewController {
   @IBOutlet weak var descriptionLabel: UILabel!
   @IBOutlet weak var iconImage: UIImageView!
   
-  //let shared = WeatherService.shared
+  var defaults: UserDefaults = UserDefaults.standard
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    UserDefaults.standard.string(forKey: (self.cityLabel?.text)!)
+    defaults.set(true, forKey: self.cityLabel.text!)
+    
     searchCity()
   }
   
@@ -67,7 +68,7 @@ class ViewController: UIViewController {
           print(error)
         }
       }
-      }.resume()
+    }.resume()
   }
   
   func getImage(icon: String) {
@@ -98,9 +99,7 @@ class ViewController: UIViewController {
     present(alert, animated: true, completion: nil)
   }
   
-  
   @IBAction func searchTapped(_ sender: Any) {
     searchCity()
   }
 } // end of class
-
