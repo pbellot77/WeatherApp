@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BA3609121FCBC1B500AE0C8C /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3609111FCBC1B500AE0C8C /* WeatherService.swift */; };
 		BAA773FF1FC55D47001E436C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA773FE1FC55D47001E436C /* AppDelegate.swift */; };
 		BAA774011FC55D47001E436C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA774001FC55D47001E436C /* ViewController.swift */; };
 		BAA774041FC55D47001E436C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAA774021FC55D47001E436C /* Main.storyboard */; };
@@ -36,7 +35,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BA3609111FCBC1B500AE0C8C /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 		BAA773FB1FC55D47001E436C /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAA773FE1FC55D47001E436C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAA774001FC55D47001E436C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -104,15 +102,6 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		BA3609101FCBC18700AE0C8C /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-				BA3609111FCBC1B500AE0C8C /* WeatherService.swift */,
-			);
-			name = Networking;
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		BAA773F21FC55D47001E436C = {
 			isa = PBXGroup;
 			children = (
@@ -138,7 +127,6 @@
 			children = (
 				BAA773FE1FC55D47001E436C /* AppDelegate.swift */,
 				BAA7740A1FC55D47001E436C /* Info.plist */,
-				BA3609101FCBC18700AE0C8C /* Networking */,
 				BA2C54EC1FC9E06B001F20BC /* Model */,
 				BA2C54ED1FC9E095001F20BC /* View */,
 				BA2C54EE1FC9E0C6001F20BC /* Controller */,
@@ -298,7 +286,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA3609121FCBC1B500AE0C8C /* WeatherService.swift in Sources */,
 				BAA774011FC55D47001E436C /* ViewController.swift in Sources */,
 				BAA7742D1FC55D5B001E436C /* CurrentWeather.swift in Sources */,
 				BAA773FF1FC55D47001E436C /* AppDelegate.swift in Sources */,

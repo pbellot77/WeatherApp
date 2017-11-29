@@ -9,10 +9,6 @@
 import Foundation
 
 struct CurrentWeather: Decodable {
-  let list: [List]
-}
-
-struct List: Decodable {
   let name: String
   let main: Main
   let weather: [Weather]
